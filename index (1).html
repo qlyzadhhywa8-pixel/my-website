@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ساخت و بازیابی اکانت اینستاگرام؛ آموزش کامل | استارت اینستا</title>
+<meta name="description" content="آموزش ساده و کامل ساخت اکانت اینستاگرام و بازیابی آن: فراموشی رمز، هک شدن، مسدود شدن، حذف اکانت و مشکل کد تأیید. قدم‌به‌قدم و بدون پیچیدگی.">
+<meta name="robots" content="index, follow">
+<!-- بعد از آپلود سایت، آدرس واقعی خودتان را اینجا بگذارید -->
+<!-- <link rel="canonical" href="https://YOUR-DOMAIN.com/"> -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fa_IR">
+<meta property="og:title" content="ساخت اکانت اینستاگرام؛ آموزش قدم‌به‌قدم و ساده">
+<meta property="og:description" content="در کمتر از ۵ دقیقه اکانت اینستاگرام بسازید. مراحل ساده برای موبایل و کامپیوتر.">
+<meta name="theme-color" content="#6c3df0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%236c3df0'/%3E%3Cpath d='M32 18v28M18 32h28' stroke='white' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8ff;--surface:#ffffff;--ink:#1b1530;--muted:#5d5873;--line:#e4def5;--accent:#6c3df0;--pink:#ff4d8d;--amber:#ffb020;--accent-ink:#ffffff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#120e22;--surface:#1b1630;--ink:#efeaff;--muted:#aaa3c4;--line:#2e2750;--accent:#9a7bff;--accent-ink:#120e22;color-scheme:dark}}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",Tahoma,"Segoe UI",sans-serif;line-height:1.95;font-size:16px}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:var(--ink);text-decoration:none}
+.brand svg{width:34px;height:34px}
+.bar nav{display:flex;gap:18px;font-size:.92rem}
+.bar nav a{color:var(--muted);text-decoration:none}
+.bar nav a:hover{color:var(--accent)}
+@media(max-width:560px){.bar nav a:nth-child(4){display:none}}
+.hero{padding:56px 0 40px;background:radial-gradient(900px 340px at 85% -10%,rgba(108,61,240,.18),transparent 60%),radial-gradient(600px 300px at 5% 10%,rgba(255,77,141,.14),transparent 60%)}
+h1{font-size:clamp(1.9rem,7.5vw,3rem);font-weight:800;line-height:1.35;margin:0 0 14px}
+.hero p{margin:0 0 24px;color:var(--muted);font-size:1.08rem;max-width:48ch}
+.btn{display:inline-block;padding:12px 26px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--pink));color:#fff;font-weight:800;text-decoration:none}
+.btn:focus-visible,a:focus-visible,summary:focus-visible,.tab:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;font-size:.88rem;color:var(--muted)}
+.chips span{border:1px solid var(--line);background:var(--surface);padding:2px 12px;border-radius:999px}
+section{padding:36px 0}
+h2{font-size:1.6rem;font-weight:800;margin:0 0 6px;line-height:1.5}
+.sub{color:var(--muted);margin:0 0 22px}
+.need{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.need div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.need b{display:block;margin-bottom:2px}
+.tabs{display:flex;gap:8px;margin-bottom:20px}
+.tab{font:inherit;padding:8px 20px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:800}
+ol.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+ol.steps li{counter-increment:s;position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 70px 16px 18px;margin-bottom:12px}
+ol.steps li::before{content:counter(s);position:absolute;right:16px;top:16px;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--pink));color:#fff;font-weight:800;display:grid;place-items:center}
+ol.steps b{display:block}
+ol.steps span{color:var(--muted)}
+[hidden]{display:none!important}
+.tip{border-right:4px solid var(--amber);background:var(--surface);padding:14px 18px;border-radius:12px;margin-top:16px}
+ul.list{padding-inline-start:22px;margin:0}
+ul.list li{margin-bottom:6px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:10px}
+summary{cursor:pointer;padding:14px 18px;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:1.3rem;line-height:1.4}
+details[open] summary::after{content:"−"}
+details p{margin:0;padding:0 18px 16px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:32px 0 52px;color:var(--muted);font-size:.93rem;text-align:center}
+footer .yt{display:inline-block;margin-top:6px;font-weight:800}
+h3{font-size:1.25rem;font-weight:800;margin:44px 0 6px;line-height:1.6}
+.toc{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:0 0 8px;padding:0;list-style:none}
+.toc a{display:block;padding:10px 16px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);text-decoration:none;font-weight:500}
+.toc a:hover{border-color:var(--accent);color:var(--accent)}
+.warn{border-right:4px solid var(--pink);background:var(--surface);padding:14px 18px;border-radius:12px;margin:16px 0}
+.rec p{margin:0 0 12px}
+.rec h4{font-size:1.02rem;margin:20px 0 6px}
+.note{font-size:.82rem;margin-top:14px}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+<a class="brand" href="#top" aria-label="استارت اینستا">
+<svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6c3df0"/><stop offset="1" stop-color="#ff4d8d"/></linearGradient></defs><rect width="64" height="64" rx="18" fill="url(#g)"/><path d="M32 17v30M17 32h30" stroke="#fff" stroke-width="7" stroke-linecap="round"/><circle cx="48" cy="16" r="5" fill="#ffb020"/></svg>
+استارت اینستا</a>
+<nav aria-label="منو"><a href="#steps">ساخت</a><a href="#recover">بازیابی</a><a href="#security">امنیت</a><a href="#faq">سؤال‌ها</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<h1>ساخت اکانت اینستاگرام؛ قدم‌به‌قدم و ساده</h1>
+<p>در کمتر از ۵ دقیقه اکانت اینستاگرام بسازید. این راهنما برای موبایل و کامپیوتر است و بدون پیچیدگی توضیح داده شده.</p>
+<a class="btn" href="#steps">شروع آموزش</a>
+<div class="chips"><span>رایگان</span><span>ساخت اکانت</span><span>بازیابی اکانت</span><span>موبایل و کامپیوتر</span></div>
+</div></div>
+
+<div class="wrap">
+<section id="need">
+<h2>قبل از شروع چه چیزی لازم است؟</h2>
+<p class="sub">فقط سه چیز ساده:</p>
+<div class="need">
+<div><b>شماره موبایل یا ایمیل</b>فعال باشد تا کد تأیید برایتان بیاید.</div>
+<div><b>گوشی یا کامپیوتر</b>همراه با اینترنت پایدار.</div>
+<div><b>سن حداقل ۱۳ سال</b>این شرط خود اینستاگرام است.</div>
+</div>
+</section>
+
+<section id="steps">
+<h2>مراحل ساخت اکانت</h2>
+<p class="sub">روش خودتان را انتخاب کنید:</p>
+<div class="tabs" role="tablist">
+<button class="tab" role="tab" id="t-m" aria-selected="true" aria-controls="p-m">با موبایل</button>
+<button class="tab" role="tab" id="t-c" aria-selected="false" aria-controls="p-c">با کامپیوتر</button>
+</div>
+
+<div id="p-m" role="tabpanel" aria-labelledby="t-m">
+<ol class="steps">
+<li><b>برنامه را نصب کنید</b><span>اینستاگرام را از گوگل‌پلی (اندروید) یا اپ‌استور (آیفون) دانلود و باز کنید.</span></li>
+<li><b>ایجاد حساب جدید را بزنید</b><span>در صفحه اول گزینه «ایجاد حساب جدید» (Create new account) را انتخاب کنید.</span></li>
+<li><b>شماره موبایل یا ایمیل را وارد کنید</b><span>هر کدام را که در دسترس دارید بنویسید.</span></li>
+<li><b>کد تأیید را وارد کنید</b><span>یک کد برایتان پیامک یا ایمیل می‌شود. آن را در برنامه بنویسید.</span></li>
+<li><b>نام و رمز عبور بگذارید</b><span>رمز قوی انتخاب کنید و جایی امن یادداشت کنید.</span></li>
+<li><b>تاریخ تولد را وارد کنید</b><span>تاریخ درست را بنویسید؛ این اطلاعات برای تنظیمات حساب لازم است.</span></li>
+<li><b>نام کاربری انتخاب کنید</b><span>اینستاگرام چند پیشنهاد می‌دهد. می‌توانید خودتان هم بنویسید.</span></li>
+<li><b>عکس پروفایل و بیو (اختیاری)</b><span>می‌توانید همین حالا اضافه کنید یا بعداً از بخش «ویرایش پروفایل» انجام دهید.</span></li>
+</ol>
+</div>
+
+<div id="p-c" role="tabpanel" aria-labelledby="t-c" hidden>
+<ol class="steps">
+<li><b>سایت را باز کنید</b><span>در مرورگر به آدرس <bdi dir="ltr">instagram.com</bdi> بروید.</span></li>
+<li><b>ثبت‌نام را بزنید</b><span>گزینه «ثبت‌نام» (Sign up) را انتخاب کنید.</span></li>
+<li><b>شماره یا ایمیل را بنویسید</b><span>همان اطلاعاتی که در دسترس دارید.</span></li>
+<li><b>فرم را کامل کنید</b><span>نام کامل، نام کاربری و رمز عبور را وارد کنید.</span></li>
+<li><b>تاریخ تولد را وارد کنید</b><span>تاریخ درست را بنویسید.</span></li>
+<li><b>کد تأیید را بنویسید</b><span>کدی که برایتان ارسال شده را وارد کنید.</span></li>
+<li><b>عکس و بیو اضافه کنید</b><span>اختیاری است و بعداً هم می‌شود انجام داد.</span></li>
+<li><b>تمام</b><span>اکانت شما ساخته شد و می‌توانید اولین پست را بگذارید.</span></li>
+</ol>
+</div>
+<div class="tip"><b>نکته:</b> اگر اینستاگرام شماره موبایل را نپذیرفت، با ایمیل ثبت‌نام کنید و شماره را بعداً در تنظیمات اضافه کنید.</div>
+</section>
+
+<section id="username">
+<h2>یک نام کاربری خوب چه ویژگی‌هایی دارد؟</h2>
+<p class="sub">نام کاربری را بعداً هم می‌توانید عوض کنید، ولی از اول فکر کنید.</p>
+<ul class="list">
+<li>کوتاه و خواندنش آسان باشد.</li>
+<li>انگلیسی بنویسید تا راحت پیدا شود.</li>
+<li>از عدد و علامت اضافه کمتر استفاده کنید. نقطه و زیرخط (_) مجاز است.</li>
+<li>اگر برای کسب‌وکار می‌سازید، نام برند را بگذارید.</li>
+</ul>
+</section>
+
+<section id="security">
+<h2>بعد از ساخت اکانت، امنیت را فراموش نکنید</h2>
+<p class="sub">این سه کار از هک شدن جلوگیری می‌کند:</p>
+<ul class="list">
+<li><b>رمز قوی:</b> ترکیب حرف، عدد و علامت، و متفاوت از رمز بقیه سایت‌ها.</li>
+<li><b>تأیید دومرحله‌ای:</b> از تنظیمات، بخش «Accounts Center» و سپس «Password and security» آن را روشن کنید.</li>
+<li><b>ایمیل و شماره به‌روز:</b> برای بازیابی اکانت لازم می‌شود.</li>
+</ul>
+</section>
+
+<section id="recover" class="rec">
+<h2>بازیابی اکانت اینستاگرام؛ راهنمای کامل</h2>
+<p class="sub">اکانتتان را از دست داده‌اید یا نمی‌توانید وارد شوید؟ نگران نباشید. اول مشکل خودتان را پیدا کنید، بعد همان بخش را قدم‌به‌قدم بخوانید.</p>
+<ul class="toc">
+<li><a href="#r-pass">رمز عبور را فراموش کرده‌ام</a></li>
+<li><a href="#r-access">به ایمیل یا شماره قبلی دسترسی ندارم</a></li>
+<li><a href="#r-hack">اکانتم هک شده</a></li>
+<li><a href="#r-disabled">اکانتم مسدود (Disabled) شده</a></li>
+<li><a href="#r-deleted">اکانتم را غیرفعال یا حذف کرده‌ام</a></li>
+<li><a href="#r-2fa">کد تأیید دومرحله‌ای ندارم</a></li>
+</ul>
+
+<h3 id="r-pass">۱. رمز عبور را فراموش کرده‌ام</h3>
+<p>رایج‌ترین مشکل همین است و معمولاً در چند دقیقه حل می‌شود. فقط باید به ایمیل یا شماره‌ای که با آن ثبت‌نام کرده‌اید دسترسی داشته باشید.</p>
+<ol class="steps">
+<li><b>صفحه ورود را باز کنید</b><span>در برنامه یا سایت، گزینه «رمز عبور را فراموش کرده‌اید؟» (Forgot password?) را بزنید.</span></li>
+<li><b>مشخصات حساب را بنویسید</b><span>نام کاربری، ایمیل یا شماره موبایل‌تان را وارد کنید.</span></li>
+<li><b>لینک یا کد را بگیرید</b><span>اینستاگرام برایتان ایمیل یا پیامک می‌فرستد. اگر نیامد، چند دقیقه صبر کنید و پوشه اسپم (Spam) را هم ببینید.</span></li>
+<li><b>رمز جدید بسازید</b><span>رمزی بگذارید که قبلاً جای دیگری استفاده نکرده‌اید و حدس زدنش سخت باشد.</span></li>
+</ol>
+<div class="tip"><b>اگر هنوز وارد اکانت هستید:</b> رمز را فراموش نکرده‌اید، فقط می‌خواهید عوضش کنید. از تنظیمات به «Accounts Center» و بعد «Password and security» بروید و «Change password» را بزنید.</div>
+
+<h3 id="r-access">۲. به ایمیل یا شماره قبلی دسترسی ندارم</h3>
+<p>شماره‌تان را عوض کرده‌اید یا ایمیل قدیمی را از دست داده‌اید؟ این کارها را به ترتیب امتحان کنید:</p>
+<ul class="list">
+<li><b>اول ایمیل را برگردانید:</b> اغلب راحت‌تر است که اکانت ایمیل (مثلاً Gmail) را با سرویس بازیابی خودش پس بگیرید. بعد از آن بازیابی اینستاگرام ساده می‌شود.</li>
+<li><b>از دستگاه قدیمی وارد شوید:</b> اگر روی گوشی یا مرورگری قبلاً وارد اینستاگرام بودید و هنوز لاگین است، از همان‌جا رمز و ایمیل را عوض کنید.</li>
+<li><b>گزینه راه دیگر:</b> در مرحله فراموشی رمز، اگر گزینه‌ای شبیه «Need another way to reset your password?» دیدید، آن را بزنید و دستورها را دنبال کنید.</li>
+<li><b>ورود با فیسبوک:</b> اگر اکانت اینستاگرام را به فیسبوک وصل کرده بودید، گزینه ورود با فیسبوک را امتحان کنید.</li>
+<li><b>تأیید هویت با ویدیو:</b> گاهی اینستاگرام از شما یک ویدیوی کوتاه سلفی می‌خواهد تا ثابت شود صاحب اکانت هستید. صورت‌تان را طبق راهنمای برنامه از زاویه‌های مختلف نشان دهید.</li>
+</ul>
+<div class="tip"><b>نکته:</b> این روش‌ها همیشه جواب نمی‌دهند و این به شرایط اکانت بستگی دارد. با آرامش و بدون عجله، مراحل را یکی‌یکی انجام دهید.</div>
+
+<h3 id="r-hack">۳. اکانتم هک شده</h3>
+<h4>نشانه‌های هک شدن</h4>
+<ul class="list">
+<li>رمز یا ایمیل اکانت ناگهان تغییر کرده و نمی‌توانید وارد شوید.</li>
+<li>پست، استوری یا پیامی می‌بینید که خودتان نفرستاده‌اید.</li>
+<li>ایمیلی از اینستاگرام رسیده که می‌گوید ایمیل یا شماره حساب عوض شده.</li>
+<li>در بخش دستگاه‌های واردشده، گوشی یا مکان ناشناس وجود دارد.</li>
+</ul>
+<h4>چه کار کنیم؟</h4>
+<ol class="steps">
+<li><b>ایمیل‌تان را سریع چک کنید</b><span>وقتی ایمیل حساب عوض می‌شود، اینستاگرام معمولاً به ایمیل قبلی پیامی با لینک بازگرداندن تغییر می‌فرستد. اگر هست، همان لحظه لینک را بزنید.</span></li>
+<li><b>اگر هنوز وارد هستید</b><span>فوراً رمز را عوض کنید، از همه دستگاه‌ها خارج شوید و تأیید دومرحله‌ای را روشن کنید. برنامه‌های ناشناس را هم از «Apps and websites» حذف کنید.</span></li>
+<li><b>اگر وارد نمی‌شوید</b><span>«رمز عبور را فراموش کرده‌اید؟» را بزنید. اگر جواب نداد، در مرکز راهنمای اینستاگرام (help.instagram.com) دنبال بخش «حساب من هک شده» بگردید و فرم را پر کنید.</span></li>
+<li><b>رمز ایمیل را هم عوض کنید</b><span>اگر هکر به ایمیل‌تان دسترسی داشته باشد، دوباره می‌تواند اکانت را بگیرد.</span></li>
+<li><b>به دوستانتان خبر بدهید</b><span>از طریق جای دیگر بگویید پیام‌ها و لینک‌هایی که از اکانتتان می‌آید را باز نکنند.</span></li>
+</ol>
+<div class="warn"><b>هشدار کلاهبرداری:</b> کسانی که در تلگرام، دایرکت یا سایت‌های ناشناس می‌گویند «اکانتت را با پرداخت پول برمی‌گردانیم»، اغلب کلاهبردارند. رمز و کد تأییدتان را هرگز به کسی ندهید. اینستاگرام هم رمزتان را از طریق پیام نمی‌خواهد.</div>
+
+<h3 id="r-disabled">۴. اکانتم مسدود (Disabled) شده</h3>
+<p>اگر هنگام ورود پیام «حساب شما غیرفعال شده» دیدید، یعنی اینستاگرام فکر می‌کند قوانینش نقض شده است.</p>
+<h4>دلیل‌های رایج</h4>
+<ul class="list">
+<li>نقض قوانین جامعه (محتوا، رفتار یا کپی‌رایت).</li>
+<li>فعالیت مشکوک، مثل فالو و لایک بیش از حد یا استفاده از برنامه‌های غیرمجاز.</li>
+<li>گزارش‌های زیاد از طرف کاربران دیگر.</li>
+<li>جعل هویت یا اطلاعات نادرست.</li>
+<li>سن کمتر از ۱۳ سال.</li>
+</ul>
+<h4>مراحل درخواست بازبینی</h4>
+<ol class="steps">
+<li><b>وارد اکانت شوید</b><span>برنامه معمولاً پیام مسدودی را همراه با گزینه‌ای برای ادامه یا درخواست بازبینی (Request review) نشان می‌دهد.</span></li>
+<li><b>دستورها را دنبال کنید</b><span>ممکن است نام، ایمیل یا مدرک هویتی بخواهد. اطلاعات را درست و کامل بدهید.</span></li>
+<li><b>صبر کنید</b><span>نتیجه با ایمیل یا اعلان می‌آید. زمان مشخصی تضمین نشده و گاهی چند روز طول می‌کشد. ایمیل اسپم را هم نگاه کنید.</span></li>
+<li><b>چند بار درخواست نفرستید</b><span>ارسال پشت‌سرهم معمولاً کمکی نمی‌کند و ممکن است کار را کندتر کند.</span></li>
+</ol>
+<div class="tip"><b>یادآوری:</b> نتیجه بازبینی هیچ‌وقت تضمینی نیست. اگر اکانت برنگشت، می‌توانید اکانت جدید بسازید، ولی این بار قوانین اینستاگرام را رعایت کنید. ساخت پشت‌سرهم چند اکانت ممکن است مشکل ایجاد کند.</div>
+
+<h3 id="r-deleted">۵. اکانتم را غیرفعال یا حذف کرده‌ام</h3>
+<h4>غیرفعال‌سازی موقت</h4>
+<p>اگر اکانت را فقط موقتاً غیرفعال کرده‌اید، کافی است دوباره با نام کاربری و رمز وارد شوید تا فعال شود. ممکن است چند لحظه طول بکشد تا همه چیز برگردد.</p>
+<h4>حذف دائمی</h4>
+<p>وقتی درخواست حذف می‌دهید، اکانت اول از دید بقیه مخفی می‌شود و بعد از یک دوره (طبق اعلام اینستاگرام حدود ۳۰ روز) برای همیشه پاک می‌شود. در این مدت اگر پشیمان شدید:</p>
+<ol class="steps">
+<li><b>وارد شوید</b><span>با همان نام کاربری و رمز وارد اکانت شوید.</span></li>
+<li><b>حذف را لغو کنید</b><span>اگر گزینه‌ای برای لغو حذف نشان داد، آن را تأیید کنید.</span></li>
+</ol>
+<div class="warn"><b>توجه:</b> بعد از پایان این مدت، اکانت و پست‌هایش قابل بازگشت نیستند. پس قبل از حذف، از عکس‌ها و اطلاعاتتان در تنظیمات نسخه پشتیبان (دانلود اطلاعات) بگیرید.</div>
+
+<h3 id="r-2fa">۶. کد تأیید دومرحله‌ای ندارم</h3>
+<p>تأیید دومرحله‌ای امنیت را بالا می‌برد، ولی اگر گوشی را عوض کنید یا شماره از کار بیفتد، ورود سخت می‌شود. این راه‌ها را امتحان کنید:</p>
+<ul class="list">
+<li><b>کدهای پشتیبان (Backup codes):</b> هنگام روشن کردن تأیید دومرحله‌ای، اینستاگرام چند کد یک‌بار‌مصرف می‌دهد. اگر ذخیره کرده‌اید، یکی را به‌جای کد معمولی وارد کنید.</li>
+<li><b>برنامه احراز هویت:</b> اگر از برنامه‌هایی مثل Google Authenticator استفاده می‌کنید، کد را از همان بگیرید.</li>
+<li><b>دستگاه قدیمی:</b> از گوشی‌ای که قبلاً وارد شده بودید، تأیید دومرحله‌ای را خاموش یا روش دریافت کد را عوض کنید.</li>
+<li><b>راه دیگر:</b> در صفحه کد، گزینه امتحان روش دیگر را بزنید.</li>
+</ul>
+<div class="tip"><b>پیشنهاد:</b> همین حالا کدهای پشتیبان را از تنظیمات بگیرید و جایی امن، مثل یک یادداشت خصوصی، نگه دارید.</div>
+
+<h3>چک‌لیست جلوگیری از دوباره از دست دادن اکانت</h3>
+<ul class="list">
+<li>ایمیل و شماره موبایل اکانت همیشه به‌روز و قابل دسترس باشد.</li>
+<li>رمز قوی و یکتا برای اینستاگرام بگذارید و در جای دیگری استفاده نکنید.</li>
+<li>تأیید دومرحله‌ای را روشن کنید و کدهای پشتیبان را ذخیره کنید.</li>
+<li>فقط از لینک‌های رسمی وارد شوید و به سایت‌هایی که «افزایش فالوور رایگان» می‌دهند رمز ندهید.</li>
+<li>هر چند وقت یک‌بار در Accounts Center بخش «Where you're logged in» را بررسی کنید.</li>
+<li>اکانت را به فیسبوک وصل کنید تا راه دیگری برای ورود داشته باشید.</li>
+<li>برنامه‌های شخص ثالث ناشناس را به اکانت وصل نکنید.</li>
+</ul>
+
+<h3>اگر هیچ‌کدام جواب نداد</h3>
+<p>مرکز راهنمای رسمی اینستاگرام (help.instagram.com) را باز کنید و بخش مربوط به مشکل خودتان را پیدا کنید. فرم‌ها را کامل و با اطلاعات درست پر کنید و صبور باشید. در همین فاصله می‌توانید اکانت جدید بسازید و از راه‌های دیگر مثل یوتیوب یا دوستانتان به دنبال‌کننده‌هایتان خبر بدهید.</p>
+</section>
+
+<section id="faq">
+<h2>سؤال‌های پرتکرار</h2>
+<p class="sub">جواب مشکلات رایج:</p>
+<details><summary>کد تأیید برایم نمی‌آید، چه کنم؟</summary><p>چند دقیقه صبر کنید و گزینه «ارسال مجدد» را بزنید. شماره را درست وارد کرده باشید و پوشه اسپم ایمیل را هم ببینید. اگر نشد، با ایمیل ثبت‌نام کنید.</p></details>
+<details><summary>پیام «نام کاربری گرفته شده» می‌دهد.</summary><p>یک نقطه، زیرخط یا کلمه کوتاه به نام اضافه کنید. مثلاً <bdi dir="ltr">sara.design</bdi> به‌جای <bdi dir="ltr">sara</bdi>.</p></details>
+<details><summary>می‌توانم چند اکانت داشته باشم؟</summary><p>بله. اینستاگرام اجازه می‌دهد چند حساب را در یک برنامه اضافه کنید و بین آن‌ها جابه‌جا شوید. از پروفایل‌تان گزینه «افزودن حساب» را بزنید.</p></details>
+<details><summary>بازیابی اکانت اینستاگرام چقدر طول می‌کشد؟</summary><p>بسته به مشکل فرق دارد. بازیابی رمز با ایمیل یا شماره معمولاً چند دقیقه است. بازبینی اکانت مسدود یا هک‌شده ممکن است چند روز یا بیشتر طول بکشد و زمان مشخصی تضمین نشده است.</p></details>
+<details><summary>با پرداخت پول می‌شود اکانت را برگرداند؟</summary><p>خیر. بازیابی رسمی اینستاگرام رایگان است. هر کسی که برای برگرداندن اکانت پول می‌خواهد احتمالاً کلاهبردار است.</p></details>
+<details><summary>اکانتی که ۳۰ روز از حذفش گذشته برمی‌گردد؟</summary><p>طبق توضیح اینستاگرام، بعد از پایان دوره حذف، اکانت برای همیشه پاک می‌شود و قابل بازگشت نیست.</p></details>
+<details><summary>کد تأیید بازیابی نمی‌آید، چه کنم؟</summary><p>چند دقیقه صبر کنید، پوشه اسپم را ببینید، شماره یا ایمیل را دوباره بررسی کنید و بعد ارسال مجدد را بزنید. اگر نشد، راه دیگری مثل ورود با فیسبوک یا دستگاه قدیمی را امتحان کنید.</p></details>
+<details><summary>ساخت اکانت پولی است؟</summary><p>خیر، ساخت و استفاده از اکانت اینستاگرام رایگان است.</p></details>
+<details><summary>زیر ۱۳ سال می‌شود اکانت ساخت؟</summary><p>طبق قوانین اینستاگرام، حداقل سن ۱۳ سال است.</p></details>
+</section>
+</div>
+</main>
+
+<footer><div class="wrap">
+<div>اگر خواستید، یک سر به کانال یوتیوب ما بزنید:</div>
+<a class="yt" href="https://www.youtube.com/@foot-c8q" target="_blank" rel="noopener">@foot-c8q</a>
+<div class="note">استارت اینستا یک سایت آموزشی مستقل است و وابسته به اینستاگرام یا شرکت متا نیست.</div>
+</div></footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"ساخت اکانت اینستاگرام","description":"آموزش ساده ساخت اکانت اینستاگرام با موبایل در ۸ مرحله","inLanguage":"fa","step":[
+{"@type":"HowToStep","name":"نصب برنامه","text":"اینستاگرام را از گوگل‌پلی یا اپ‌استور دانلود و باز کنید."},
+{"@type":"HowToStep","name":"ایجاد حساب جدید","text":"گزینه ایجاد حساب جدید را بزنید."},
+{"@type":"HowToStep","name":"شماره یا ایمیل","text":"شماره موبایل یا ایمیل خود را وارد کنید."},
+{"@type":"HowToStep","name":"کد تأیید","text":"کد ارسال‌شده را وارد کنید."},
+{"@type":"HowToStep","name":"نام و رمز عبور","text":"نام و یک رمز عبور قوی انتخاب کنید."},
+{"@type":"HowToStep","name":"تاریخ تولد","text":"تاریخ تولد را وارد کنید."},
+{"@type":"HowToStep","name":"نام کاربری","text":"یک نام کاربری انتخاب کنید."},
+{"@type":"HowToStep","name":"عکس و بیو","text":"در صورت تمایل عکس پروفایل و بیو اضافه کنید."}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"fa","mainEntity":[
+{"@type":"Question","name":"بازیابی اکانت اینستاگرام چقدر طول می‌کشد؟","acceptedAnswer":{"@type":"Answer","text":"بازیابی رمز با ایمیل یا شماره معمولاً چند دقیقه است، ولی بازبینی اکانت مسدود یا هک‌شده ممکن است چند روز یا بیشتر طول بکشد."}},
+{"@type":"Question","name":"با پرداخت پول می‌شود اکانت اینستاگرام را برگرداند؟","acceptedAnswer":{"@type":"Answer","text":"خیر، بازیابی رسمی رایگان است و درخواست پول برای برگرداندن اکانت معمولاً کلاهبرداری است."}},
+{"@type":"Question","name":"ساخت اکانت اینستاگرام پولی است؟","acceptedAnswer":{"@type":"Answer","text":"خیر، ساخت و استفاده از اکانت اینستاگرام رایگان است."}},
+{"@type":"Question","name":"حداقل سن برای ساخت اکانت اینستاگرام چقدر است؟","acceptedAnswer":{"@type":"Answer","text":"طبق قوانین اینستاگرام، حداقل سن ۱۳ سال است."}},
+{"@type":"Question","name":"کد تأیید اینستاگرام نمی‌آید، چه کنم؟","acceptedAnswer":{"@type":"Answer","text":"چند دقیقه صبر کنید، ارسال مجدد را بزنید و در صورت نیاز با ایمیل ثبت‌نام کنید."}}]}
+</script>
+<script>
+(function(){
+var tm=document.getElementById("t-m"),tc=document.getElementById("t-c"),pm=document.getElementById("p-m"),pc=document.getElementById("p-c");
+function show(m){tm.setAttribute("aria-selected",m);tc.setAttribute("aria-selected",!m);pm.hidden=!m;pc.hidden=m}
+tm.onclick=function(){show(true)};tc.onclick=function(){show(false)};
+})();
+</script>
+</body>
+</html>
